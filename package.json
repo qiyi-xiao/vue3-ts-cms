@@ -13,6 +13,8 @@
     "vue": "^3.2.13"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -24,10 +26,10 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^8.0.3",
+    "husky": "^8.0.0",
     "less": "^4.0.0",
     "less-loader": "^8.0.0",
     "prettier": "^2.8.8",
-    "typescript": "~4.5.5",
-    "husky": "^8.0.0"
+    "typescript": "~4.5.5"
   }
 }
