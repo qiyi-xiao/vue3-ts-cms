@@ -6,9 +6,13 @@ import 'element-plus/dist/index.css'
 
 import router from './router'
 import store from '@/store'
+import hyRequest from '@/service'
+
+import './service/axios_demo'
 
 const app = createApp(App)
 app.use(router)
 app.use(store)
 app.use(ElementPlus)
+
 app.mount('#app')

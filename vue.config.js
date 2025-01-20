@@ -5,7 +5,8 @@
 // const path = require('path')
 module.exports = {
   outputDir: './build', // 构建时输出的目录
-
+  // publicPath: process.env.NODE_ENV === 'production' ? '/vue3-ts-cms/' : './',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : './',
   configureWebpack: {
     resolve: {
       alias: {
