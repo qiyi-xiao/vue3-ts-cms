@@ -1,5 +1,15 @@
 import axios from 'axios'
 import { BASE_URL, TIME_OUT } from './request/config'
+import commonReq from '@/service'
+
+commonReq
+  .get({
+    url: '/test'
+  })
+  .then(function (res) {
+    console.log('commonReq', res)
+    return console.log(res)
+  })
 
 axios.interceptors.request.use(
   (config) => {

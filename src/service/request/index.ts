@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios, { InternalAxiosRequestConfig } from 'axios'
 import type { AxiosInstance } from 'axios'
 import { ICommonRequestConfig, ICommonRequstInterceptors } from './type'
 
@@ -29,7 +29,9 @@ class commonRequest {
     // 使用单个实例拦截器
     // 1.从config中取出的拦截器是对应的实例的拦截器
     this.instance.interceptors.request.use(
-      this.interceptors?.requestInterceptor,
+      this.interceptors?.requestInterceptor as (
+        config: InternalAxiosRequestConfig<any>
+      ) => InternalAxiosRequestConfig<any>,
       this.interceptors?.requestInterceptorCatch
     )
     this.instance.interceptors.response.use(
@@ -94,7 +96,9 @@ class commonRequest {
     return new Promise((resolve, reject) => {
       // 1.单个请求对请求config的处理
       if (config.interceptors?.requestInterceptor) {
-        config = config.interceptors.requestInterceptor(config)
+        config = config.interceptors.requestInterceptor(
+          config as InternalAxiosRequestConfig
+        )
       }
 
       // 2.判断是否需要显示loading
