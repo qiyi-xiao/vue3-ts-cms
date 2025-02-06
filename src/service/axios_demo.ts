@@ -34,7 +34,7 @@ axios.interceptors.response.use(
   }
 )
 
-axios
-  // .get('http://127.0.0.1:4523/m1/5784364-5468739-default/test')
-  .get(BASE_URL + '/test')
-  .then((r) => console.log(r))
+// axios
+//   // .get('http://127.0.0.1:4523/m1/5784364-5468739-default/test')
+//   .get(BASE_URL + '/test')
+//   .then((r) => console.log(r))
